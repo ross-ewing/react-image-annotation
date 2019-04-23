@@ -46,11 +46,13 @@ export default {
   renderEditor: function renderEditor(_ref2) {
     var annotation = _ref2.annotation,
         onChange = _ref2.onChange,
-        onSubmit = _ref2.onSubmit;
+        onSubmit = _ref2.onSubmit,
+        timecode = _ref2.timecode
     return React.createElement(Editor, {
       annotation: annotation,
       onChange: onChange,
-      onSubmit: onSubmit
+      onSubmit: onSubmit,
+      timecode: timecode,
     });
   },
   renderHighlight: function renderHighlight(_ref3) {
