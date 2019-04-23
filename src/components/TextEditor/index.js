@@ -1,61 +1,39 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
+var _templateObject = _taggedTemplateLiteralLoose(['\n  padding: 8px 16px;\n\n  textarea {\n    border: 0;\n    font-size: 14px;\n    margin: 6px 0;\n    min-height: 60px;\n    outline: 0;\n  }\n'], ['\n  padding: 8px 16px;\n\n  textarea {\n    border: 0;\n    font-size: 14px;\n    margin: 6px 0;\n    min-height: 60px;\n    outline: 0;\n  }\n']),
+    _templateObject2 = _taggedTemplateLiteralLoose(['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n'], ['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n']);
 
-const Inner = styled.div`
-  padding: 8px 16px;
+function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
-  textarea {
-    border: 0;
-    font-size: 14px;
-    margin: 6px 0;
-    min-height: 60px;
-    outline: 0;
-  }
-`
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
-const Button = styled.div`
-  background: whitesmoke;
-  border: 0;
-  box-sizing: border-box;
-  color: #363636;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 0;
-  outline: 0;
-  padding: 8px 16px;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.1);
-  width: 100%;
+var Inner = styled.div(_templateObject);
 
-  transition: background 0.21s ease-in-out;
+var Button = styled.div(_templateObject2);
 
-  &:focus, &:hover {
-    background: #eeeeee;
-  }
-`
-
-function TextEditor (props) {
-  return (
-    <React.Fragment>
-      <Inner>
-        <textarea
-          placeholder='Write description'
-          onFocus={props.onFocus}
-          onBlur={props.onBlur}
-          onChange={props.onChange}
-          value={props.value}
-        >
-        </textarea>
-      </Inner>
-      {props.value && (
-        <Button
-          onClick={props.onSubmit}
-        >
-          Submit
-        </Button>
-      )}
-    </React.Fragment>
-  )
+function TextEditor(props) {
+  return React.createElement(
+    React.Fragment,
+    null,
+    React.createElement(
+      Inner,
+      null,
+      React.createElement('textarea', {
+        placeholder: 'Write description',
+        onFocus: props.onFocus,
+        onBlur: props.onBlur,
+        onChange: props.onChange,
+        value: props.value
+      })
+    ),
+    React.createElement('div', null, `${props.timecode}`),
+    props.value && React.createElement(
+      Button,
+      {
+        onClick: props.onSubmit
+      },
+      'Submit'
+    )
+  );
 }
 
-export default TextEditor
+export default TextEditor;
