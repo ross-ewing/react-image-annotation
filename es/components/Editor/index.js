@@ -37,6 +37,7 @@ function Editor(props) {
         }));
       },
       onSubmit: props.onSubmit,
+      timecode: props.timecode,
       value: props.annotation.data && props.annotation.data.text
     })
   );

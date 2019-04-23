@@ -185,6 +185,7 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
       }),
       !props.disableEditor && props.value && props.value.selection && props.value.selection.showEditor && renderEditor({
         annotation: props.value,
+        timecode: props.timecode,
         onChange: props.onChange,
         onSubmit: this.onSubmit
       }),

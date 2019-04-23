@@ -25,6 +25,7 @@ function TextEditor(props) {
         value: props.value
       })
     ),
+    React.createElement('div', null, `${props.timecode}`),
     props.value && React.createElement(
       Button,
       {
